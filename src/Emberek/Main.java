@@ -1,6 +1,9 @@
 package Emberek;
 
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
         Ember e1 = new Ember("Alfonzo", "1987-11-22", "Miskolc");
@@ -11,6 +14,15 @@ public class Main {
 
         Ember[] emberTomb = new Ember[]{e1, e2, e3, e4, e5};
         Emberek ek= new Emberek(emberTomb);
+        String fajlnev="emberek.txt";
+        try {
+            Emberek ek2=new Emberek(fajlnev);
+            System.out.println(ek2);
+        } catch (FileNotFoundException e) {
+           System.out.printf("Anyád %s",fajlnev);
+        } catch (IOException e) {
+            System.out.println("Ismeretlen hiba");
+        }
 
         System.out.println(ek);
 
