@@ -11,4 +11,9 @@ public class Ember {
         this.szulDatum=szulDatum;
         this.szulHely=szulHely;
     }
+
+
+    @Override
+    public String toString() {return String.format("%s született %s , %s településen",this.nev,this.szulDatum,this.szulHely);}
+
 }
