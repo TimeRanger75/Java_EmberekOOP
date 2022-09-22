@@ -1,5 +1,8 @@
 package Emberek;
 
+import java.time.LocalDateTime;
+import java.util.Date;
+
 public class Ember {
 
     private String nev;
@@ -14,20 +17,21 @@ public class Ember {
 
 
     public int SzulEv(){
-        int szulEv=Integer.parseInt(szulDatum.substring(0,4));
-        return  szulEv;
+        return Integer.parseInt(szulDatum.substring(0,4));
     }
 
     public int SzulHo(){
-        int szulHo=Integer.parseInt(szulDatum.substring(5,7));
-        return  szulHo;
+        return Integer.parseInt(szulDatum.substring(5,7));
     }
 
     public int SzulNap(){
-        int szulNap=Integer.parseInt(szulDatum.substring(8,10));
-        return  szulNap;
+      return Integer.parseInt(szulDatum.substring(8,10));
     }
 
+
+    public int Kor(){
+      return LocalDateTime.now().getYear()-this.SzulEv();
+    }
 
 
     @Override

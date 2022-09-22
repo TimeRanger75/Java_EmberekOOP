@@ -13,5 +13,6 @@ public class Main {
         System.out.println(e1.SzulEv());
 
         System.out.printf("%s, %s, %s",e1.SzulEv(),e2.SzulEv(),e3.SzulEv());
+        System.out.println("\n"+e1.Kor());
     }
 }
